@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// Nessus exposes the resources offered via the Tenable Nessus RESTful API.
+// Nessus 通过RESTFUL API调用Nessus进行扫描.
 type Nessus interface {
 	SetVerbose(bool)
 	AuthCookie() string
@@ -59,6 +59,7 @@ type nessusImpl struct {
 	verbose bool
 }
 
+// NewInsecureNessus 返回nessusImpl的实例
 func NewInsecureNessus(apiURL string) (*nessusImpl, error) {
 	return newNessus(apiURL)
 }
@@ -74,6 +75,7 @@ func newNessus(apiURL string) (*nessusImpl, error) {
 	return &nessusImpl{apiURL: apiURL, client: client}, nil
 }
 
+// Folders 查看Nessus扫描器内部有多少个扫描文件夹
 func (n *nessusImpl) Folders() ([]Folder, error) {
 	if n.verbose {
 		log.Println("Getting list of folders...")

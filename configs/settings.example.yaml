@@ -1,0 +1,8 @@
+nessus:
+  host: https://10.211.55.54:8834/
+  username: admin
+  password: password
+  tmplates:
+    basic: 731a8e52-3ea6-a291-ec0a-d2ff0619c19d7bd788d6be818b65
+  uuid: 7A2C4A96-4AEE-4706-9617-2EF643532628
+

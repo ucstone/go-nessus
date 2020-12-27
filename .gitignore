@@ -1,0 +1,8 @@
+newScan_test.go
+nessus_test.go
+.idea
+.vscode
+.DS_Store
+*.~
+*.swp
+.git

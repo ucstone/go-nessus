@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// NewScan 新建扫描
 func (n *nessusImpl) NewScan(
 	TmplUUID string,
 	Name string,

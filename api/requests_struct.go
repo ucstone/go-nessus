@@ -16,13 +16,3 @@ type Settings struct {
 	TextTargets string `json:"text_targets"`
 	FileTargets string `json:"file_targets"`
 }
-
-type Acls struct {
-	ObjectType  string `json:"object_type"`
-	Permissions int    `json:"permissions"`
-	Type        string `json:"type"`
-	DisplayName string `json:"display_name,omitempty"`
-	Name        string `json:"name,omitempty"`
-	Owner       int    `json:"owner,omitempty"`
-	ID          int    `json:"id,omitempty"`
-}

@@ -1,6 +1,6 @@
 package api
 
-// loginResp is the internal response to login attemps.
+// loginResp 登录时响应.
 type loginResp struct {
 	Token string `json:"token"`
 }
@@ -100,16 +100,6 @@ type ScanDetailsResp struct {
 
 type listFoldersResp struct {
 	Folders []Folder `json:"folders"`
-}
-
-type exportStatusResp struct {
-	Status string `json:"status"`
-}
-
-// CreatePolicyResp response body If successful
-type CreatePolicyResp struct {
-	PolicyID   int64  `json:"policy_id"`
-	PolicyName string `json:"policy_name"`
 }
 
 type ScanResp struct {

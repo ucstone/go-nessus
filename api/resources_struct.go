@@ -254,25 +254,3 @@ type Session struct {
 	ContainerID int64    `json:"container_id"`
 	Groups      []string `json:"groups"`
 }
-
-type User struct {
-	ID          int    `json:"id"`
-	Username    string `json:"username"`
-	Name        string `json:"name"`
-	Email       string `json:"email"`
-	Permissions int    `json:"permissions"`
-	LastLogin   int    `json:"lastlogin"`
-	Type        string `json:"type"`
-}
-
-// AgentGroup The details of an agent group.
-type AgentGroup struct {
-	ID                   int64  `json:"id"`
-	Name                 string `json:"name"`
-	OwnerID              int64  `json:"owner_id"`
-	Owner                string `json:"owner"`
-	Shared               int    `json:"shared"`
-	UserPerms            int64  `json:"user_permissions"`
-	CreationDate         int64  `json:"creation_date"`
-	LastModificationDate int64  `json:"last_modification_date"`
-}

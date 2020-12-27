@@ -13,7 +13,7 @@ import (
 
 func (n *nessusImpl) Login(username, password string) error {
 	if n.verbose {
-		log.Printf("Login into %s\n", n.apiURL)
+		log.Printf("登录Nessus扫描器... %s\n", n.apiURL)
 	}
 	data := make(map[string]interface{})
 	data["username"] = username
@@ -65,7 +65,7 @@ func (n *nessusImpl) Request(method string, resource string, bodystr interface{}
 		if err != nil {
 			return nil, err
 		}
-		log.Println("sending data:", string(db))
+		log.Println("发送数据...", string(db))
 	}
 	resp, err = n.client.Do(req)
 	if err != nil {
@@ -88,7 +88,7 @@ func (n *nessusImpl) Request(method string, resource string, bodystr interface{}
 		if err != nil {
 			return nil, err
 		}
-		return nil, fmt.Errorf("Unexpected status code, got %d wanted %v (%s)", resp.StatusCode, wantStatus, body)
+		return nil, fmt.Errorf("[Error]异常响应错误代码, error code  %d wanted %v (%s)", resp.StatusCode, wantStatus, body)
 	}
 	return resp, nil
 }

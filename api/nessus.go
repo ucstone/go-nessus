@@ -78,7 +78,7 @@ func newNessus(apiURL string) (*nessusImpl, error) {
 // Folders 查看Nessus扫描器内部有多少个扫描文件夹
 func (n *nessusImpl) Folders() ([]Folder, error) {
 	if n.verbose {
-		log.Println("Getting list of folders...")
+		log.Println("获取文件加列表...")
 	}
 
 	resp, err := n.Request("GET", "/folders", "", []int{http.StatusOK})
